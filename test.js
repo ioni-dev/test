@@ -20,9 +20,9 @@
         body: JSON.stringify({payload: objective.dataset })
       })
   
-      const content = await rawResponse.json();
+      const content = await resp.json();
       console.log('testing function->', objective.dataset);
-      alert("Button is clicked");
+      alert("Button is clicked", content);
     } catch (error) {
       
     }
