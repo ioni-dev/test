@@ -19,11 +19,12 @@
         },
         body: JSON.stringify({payload: objective.dataset })
       })
-      
+
   
       const content = await resp.json();
-      console.log('testing function->', objective.dataset);
-      alert("Button is clicked", content);
+   
+      console.log("response from next api parsed", content);
+      console.log("response from next api without parse", resp);
     } catch (error) {
       
     }
