@@ -3,7 +3,11 @@
   let btn = document.createElement("button");
   btn.innerHTML = "Click Me";
   btn.onclick =  async () => {
+    console.log('testing function before fetch->', objective.dataset);
+    alert("Button was clicked before fetch");
     const objective = document.getElementById('ultra-feedback');
+    console.log('testing function->', objective.dataset);
+    alert("Button is clicked objective");
     try {
       const resp = await fetch('localhost:3000/api/test', {
         method: 'POST',
